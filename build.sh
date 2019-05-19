@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t haugom/skopeocontainer:$1 .
+docker build --no-cache -t haugom/skopeocontainer:$1 .
