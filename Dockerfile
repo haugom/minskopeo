@@ -7,5 +7,6 @@ RUN apk add ca-certificates
 FROM alpine:latest
 COPY --from=init /usr/local/bin/skopeo /usr/local/bin/skopeo
 COPY --from=init /etc/ssl/certs /etc/ssl/certs
+COPY ./default-policy.json /etc/containers/policy.json
 ENTRYPOINT [ "/usr/local/bin/skopeo" ]
 CMD [ "--help" ]
